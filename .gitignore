@@ -1,3 +1,9 @@
+# Eclipse Project
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+Servers/
+
 # Compiled class file
 *.class
 
