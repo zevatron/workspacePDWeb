@@ -2,6 +2,7 @@ package br.edu.ifpb.pd;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.websocket.OnClose;
@@ -13,7 +14,8 @@ import javax.websocket.server.ServerEndpoint;
 @ServerEndpoint("/chat")
 public class ChatWSEndpoint {
 	
-	private List<Session> usuarios = new ArrayList<>();
+	private static List<Session> usuarios = Collections.
+			synchronizedList(new ArrayList<>());
 	
 	@OnOpen
 	public void conectar(Session s){
